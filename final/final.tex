@@ -1,0 +1,260 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\title{Statistics 101 Summer I 2011 \\ Final Examination}
+\author{Adam Kapelner, Instructor}
+
+\date{June 30, 2011, 8:30-10:30AM}
+
+\begin{document}
+\maketitle
+
+\noindent First Name \line(1,0){130} ~~~~~~ Last Name \line(1,0){200}
+
+\section*{University of Pennsylvania's Code of Academic Integrity}
+
+\footnotesize
+Since the University is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the University community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student’s performance are prohibited. Examples of such activities include but are not limited to the following definitions:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: altering a graded exam and resubmitting it for a better grade, etc.
+\\
+
+I acknowledge and agree to uphold the University of Pennsylvania's Code of Academic Integrity. \\
+
+\begin{center}
+\line(1,0){250} ~~~ \line(1,0){100}\\
+~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+\end{center}
+
+\normalsize
+
+\section*{Instructions}
+
+This exam is two hours and closed-book. A cheat sheet of 2 pages 2-sided \textit{is} allowed. You may use a graphing calculator of your choice. Please read the questions carefully. I advise you to \textit{skip difficult problems until you have finished the exam}, then loop back and plug in all the holes. I also advise you to use pencil.\\
+
+\noindent The exam is 100 points total. Partial credit will be granted for incomplete answers on most of the questions. Good luck!
+
+\pagebreak
+
+\problem Our hospital system in Philadelphia consists of St Joseph's Hospital, Penn Presbyterian Medical Center, Northeastern Hospital, and Mercy Fitzgerald Hospital. We are interested in studying Cirrhosis of the liver and alcoholism. We take a simple random sample of 235 patients out of the pooled patient population of the four hospitals and surveyed them. 
+
+In the survey, we asked the patients' age, gender, if they are or were alcoholics, whether or not they had Cirrhosis presently or in the past, whether or not their cholestoral was ``high'' or ``low'', and recorded the day of the week and hour of the day the survey was completed.
+
+57 said they either presently or were alcoholics for some time in their life. 9 of these alcoholics also have some form of Cirrhosis. There were also 10 patients who had Cirrhosis but had no history of ever drinking to excess. 
+
+\benum
+
+\subquestionwithpoints{2} Draw the first two rows of the raw data table from the compiled surveys followed by a ``...'' to indicate more rows. Make up values that are reasonable for each of the variables. Indicate column headers clearly. Add an ``ID'' column whose values are the record number beginning with the number 1 and make ``ID'' the first column.
+\vspace{3cm}
+
+\subquestionwithpoints{2} What are the data types of each of the columns in the data table? List them in order of the columns in the drawing in the previous part from left to right separated by a comma.
+\vspace{2cm}
+
+\subquestionwithpoints{3} Draw a contingency table of frequencies for cirrhosis vs. alcoholism with cirrhosis as the columns. Calculate all the marginal probabilities as percentages and round to one decimal place. Write the marginal probabilities in the margin next to the marginal frequencies. Write the sample size $n$ in the bottom left corner margin.
+\vspace{6cm}
+
+\subquestionwithpoints{5} According to Wikipedia:
+
+\begin{quotation}\sf
+About 12\% of American adults have had an alcohol dependence problem at some time in their life.
+\end{quotation}
+
+Write hypotheses and run a test at $\alpha = 5\%$ to see if the alcoholism rate is greater in our hospital system. Use the $\pval$ approach. Ignore any problems you may see with running this test, we will explore the problems afterwards.
+\vspace{8cm}
+
+\subquestionwithpoints{2} Write what the $\pval$ means for this example in English. 
+\vspace{3cm}
+
+\subquestionwithpoints{2} Why is the $\pval$ from the previous test so low? Is there cause for alarm? Is Philadelphia in trouble? Discuss.
+\vspace{6cm}
+
+%cond prob
+%\subquestionwithpoints{1} According to Wikipedia:
+%
+%\begin{quotation}\sf
+%Alcoholic cirrhosis develops for between 10\% and 20\% of individuals who drink heavily for a decade or more.
+%\end{quotation}
+%
+%Make the correct probability statement and estimate the probability.  Assume our sample is large enough for the outcomes to be considered long-term frequencies. Use the notation ``A'' for alcoholism and  ``C'' for Cirrhosis. Then, write a sentence in English comparing our hospital system's patient population to Wikipedia's claim.
+%\vspace{4cm}
+
+
+%ind and dep
+%\subquestionwithpoints{1} Assume our sample is large enough for the outcomes to be considered long-term frequencies. Are alcoholism and cirrhosis of the liver independent or dependent? Make sure you provide a mathematical justification for your answer. No hypothesis test is necessary since we're considering these estimates to be the \textit{true} probabilities.
+%\vspace{4cm}
+
+%hyp testing
+\subquestionwithpoints{2} Any association we see in this data between alcoholism and Cirrhosis may occur due to sampling variation. We wish to test the association using a statistical test. Formulate your hypotheses below by writing English sentences.
+\vspace{3cm}
+
+
+%chisq test of ind
+\subquestionwithpoints{6} Carry out the test you created in the previous part at $\alpha = 5\%$ using the $\pval$ approach (estimate the $\pval$ as best you can with the table or use your graphing calculator to calculate it exactly). Show as much work as you can. Write a sentence in English as a concluding remark.
+\vspace{11cm}
+
+%experiments vs obs studies
+\subquestionwithpoints{2} The hospital administrator wants to publish this experimental data because he thinks he found interesting results. Is this an experiment? If it is, define what an ``experiment'' is. If it's not, what is it? Then, define whatever that thing is.
+\vspace{4cm}
+
+%association and causality
+\subquestionwithpoints{3} The administrator saw the unequivocal results of these analyses and he feels that it is obvious that Cirrhosis is caused directly by alcoholism. Based solely on this study, would you agree with him? Discuss.
+\vspace{4cm}
+
+%another cond prob
+\subquestionwithpoints{3} Other hospital researchers are interested in those patients whose livers are heathly (\ie they don't have and never had Cirrhosis). Does being an alcoholic matter in that case? Phrased equivalently, is there any difference between the likelihood of being Cirrhosis free if you're not an alcoholic versus the likelihood of being Cirrhosis-free if you are an alcoholic? Frame this as a hypothesis test. Use the notation $p_1$ and $p_2$. Tell me the \textit{name} of this test but \textit{do not execute the test}.
+\vspace{3cm}
+
+\subquestionwithpoints{4} Calculate the sample proportions $\hat{p}_1$ and $\hat{p}_2$ which are necessary to investigate this situation. It would help to consult the contingency table you built previously.
+\vspace{3cm}
+
+\subquestionwithpoints{2} Assume that we only care about making inference for our hospital system. Are there any \textit{other} issue(s) with running the hypothesis test to test this difference?
+\vspace{5cm}
+
+%\subquestionwithpoints{1} Regardless of whether or not there are issue(s) that could invalidate the test, go ahead and perform the test anyway at an $\alpha = 1\%$ level using the $\pval$ approach.
+%\vspace{7cm}
+
+\eenum
+
+
+\problem Although casinos would like to believe that their games are perfectly designed to give them the edge, there are many documented cases where they make mistakes and actually allow people to play games that are expectation positive (for players). 
+
+One of the most famous of these is ``five-card-charlies'' in blackjack. If the player got five cards without busting, they automatically win. This was discontinued about 50 years ago. 
+
+A lesser-known ``hole'' in the system, which is presently available for player exploitation, is in video-draw poker with deuces wild only in Nevada. According to Wikipedia, playing for 5 credits a hand has a mean return of 100.8\% in theory. By ``theory'' we mean playing the \textit{optimal} hand for every possible combination of cards. The optimal hands are calculated by a computer that can analyze all $\binom{52}{5}$ possible hands and all possible draws. The computer can then print out rules to follow. There are literally thousands of rules.
+
+Someone with a photographic memory who can memorize some of the complicated algorithm may be able to break even, but someone who is really cheating (through unknown means) can really take the casino for a lot of money.
+
+Consider the standard bet for five credits to be \$5. Hands take 12 seconds on average to play.
+
+\benum
+
+\subquestionwithpoints{1} Why would an expectation-positive game such as 5-credit Deuces Wild Video Draw Poker be bad for the casinos in Nevada?
+\vspace{5cm}
+
+\subquestionwithpoints{2} Show that the exptected \textit{gain} of one bet (five credits) when playing like the computer under the optimal algorithm is \$0.04. Read the question carefully and you will see this problem is very simple. If you are having trouble, make sure you remember to subtract off the bet amount.
+\vspace{4cm}
+
+%\subquestionwithpoints{1} The computer also calculated the standard deviation of a five credit bet using the optimized, theoretical algorithm to be \$113. Consider the computer playing for 100hr straight in a simulated environment. What is the probability the computer loses? Either estimate this probability as best as you can using the table or use your graphing calculator to find an exact answer.
+%\vspace{6cm}
+
+The casino is tracking a suspicious person. He comes in every Monday night alone and uses a different video poker machine, always deuces wild, he plays 5-credit hands, never plays any other games, and never drinks alcohol (unlike your course instructor). The security cameras capture video of him staring intently at the screen for all of his time there. His photo ID says his name is Bassem. He plays for three hours straight every time he comes in. The casino keeps precise electronic records for each of its video poker machines. 
+
+Over the past year (52 weeks), he has won $\xbar = \$1.27$ on average per hand with sample standard deviation $s=\$110.85$. 
+
+\subquestionwithpoints{2} How many video poker hands has he played during the whole year?
+\vspace{3cm}
+
+\subquestionwithpoints{2}  You would like to calculate a 95\% confidence interval for his true mean winnings per 5-credit hand ($\xbar$ is a realization from $\Xbar$ which is centered at $\mu$, which is his ``true'' mean winnings). Are there any theoretical problems with creating this CI?
+\vspace{3cm}
+
+\subquestionwithpoints{4} Regardless of whether or not there are problems with creating this CI, calculate a 95\% confidence interval for his true mean winnings.
+\vspace{4cm}
+
+\subquestionwithpoints{2} Regardless of whether or not there are problems with creating this CI, calculate a 95\% confidence interval for his true \textit{total} winnings for the whole year in Egyptian Pounds where \$1 = 5.97E\pounds.
+\vspace{3cm}
+
+\subquestionwithpoints{2} The casino views the highest possble return of 97\% on a 5-credit play as the maximum return for a human being (not a computer). This is the return the best players can consistently achieve. This suspicious guy is indubitably in the category of ``best player''. 
+
+A 97\% return would mean that the mean winnings per hand means $\mu=-\$0.15$ and consider the same $\sigma = \$113$ as we did before.
+
+Any higher return and the casino bans the player (because they assume the player is cheating). Frame a hypothesis test to see if this guy will be booted but \textit{do not execute the test}. Make sure your hypothesis test is framed using $\mu$ and not percentage return.
+\vspace{3cm}
+
+\subquestionwithpoints{2} Considering the hypothesis test framed in the previous example, what would a type I error be and what is the cost of making such a mistake? Do not compute the cost in dollars, just explain in English what the cost would be.
+\vspace{3cm}
+
+\subquestionwithpoints{2} Considering the same hypothesis test, what would a type II error be and what is the cost of making such a mistake? Do not compute the cost in dollars, just explain in English what the cost would be.
+\vspace{3cm}
+\pagebreak 
+
+\subquestionwithpoints{7} It is clear that this guy is at least as good as the best players out there. The casino is especially concerned if this guy is playing at the theoretical maximum of 100.8\% return just like the computer program. Consider the test at $\alpha = 5\%$. Calculate the probability the casino can detect if he is playing using this theoretically optimal strategy with the aggregated video and machine data they have on him in the past year which was explained before assuming he actually \textit{is} playing with the theoretically optimal strategy. 
+
+Please do this problem after you have finished the rest of the exam. Get as far as you can; generous partial credit will be rewarded. I strongly suggest you draw a sketch to scale.
+\vspace{12cm}
+
+\subquestionwithpoints{1} Using the result from the previous question, do you think it's difficult to catch cheaters in deuces wild draw poker in Nevada? Explain. If you did not get an answer to the previous question, make up a reasonable answer to it, then answer this question appropriately.
+\vspace{4cm}
+
+\eenum
+
+%\problem Analysts, in an effort to determine car accident risk, compare car accident data for male drivers and female drivers.  They compile information about how often accidents occur, the time of day and the total amount of miles driven. 
+%
+%\benum
+%\subquestionwithpoints{1} The N.O.W. organization, which advocates for women, claims that women are better drivers than men. They observe that women get into fewer accidents per mile than men. Does this information prove that the average female driver is a lower risk of accident than an average male driver? 
+%
+%\subquestionwithpoints{1} The MMP organization, which advocates for men, claims that men are better drivers. They observe that the accident rate in rush hours is higher (per mile) for woman then for men. The accident rate per mile is also higher for women in non-rush hours. Does this information prove that the average male driver is a lower risk of accident than an average male driver?
+%
+%\subquestionwithpoints{1} Is it possible for that both the N.O.W. and the M.M.P \textit{observations} (not conclusions) are correct?  Explain.
+%\eenum
+
+
+\problem We have two mutually indistinguishable dice, call them die A and die B. They were invented by the MI6 British intelligence agency and designed to \textit{never} roll doubles. Using these dice, spies from Ghana can penetrate El Salvadorian and Colombian drug gangs who play dice games where rolling doubles can get you killed. 
+
+Here's how the dice work: if die A rolls a 1, the die B will roll a 2; if A rolls a 2, die B will roll a 3; if A rolls a 3, die B will roll a 4; if A rolls a 4, die B will roll a 5; if A rolls a 5, die B will roll a 6; if A rolls a 6, \textit{die B will roll a 1}. The probability A rolls any of the six faces is still one-sixth as usual.
+
+In homework 2, we calculated a fair die's expectation to be 3.5 and its variance to be 2.92. Use these values in the questions below; do not rederive them.
+
+\benum
+
+\subquestionwithpoints{2} Are these dice independent?  Prove or disprove using a mathematical statement.
+\vspace{2.5cm}
+
+\subquestionwithpoints{1} Are these dice identically distributed? Answering ``Yes'' or ``No'' without justification is okay.
+\vspace{1cm}
+
+\subquestionwithpoints{2} Calculate the expectation of the sum of the two faces when both are rolled together
+\vspace{2cm}
+
+\subquestionwithpoints{5} Calculate the covariance between the two die.
+\vspace{7cm}
+
+\subquestionwithpoints{2} Calculate the correlation of these two dice. Write one sentence explaining why it's positive (or negative).
+\vspace{3cm}
+\eenum
+
+\problem A oenophile (wine lover) tabulated information on a random sample of 49 wine bottles sold in an online store. Consider the offerings of this online store to be representative of wine consumption in America. 
+
+For each bottle, he recorded its price and a rating score assigned by the renowned Robert Parker. Upon visualizing the data, the scatterplot diagram appeared to be football shaped with big anomalies. Here are the summary statistics: the average price is \$40 with an sample standard deviation of  \$18. The average Parker number is 91 points with an sample standard deviation of 2 points. The correlation is .75.
+
+\benum
+\subquestionwithpoints{4} A wine with a parker number of 87 points is expected to sell at what price?
+\vspace{3cm}
+
+\subquestionwithpoints{2} What was the explanatory variable and what was the response variable you used in the previous question?
+\vspace{2cm}
+
+\subquestionwithpoints{4} The root mean squared error for the model you built in (a) is 11.9. 
+
+You come across a new wine with a Parker number of 95 points that is selling for \$76.  What fraction of wines with Parker Number of 95 points sell for \$76 or less?
+\vspace{4cm}
+
+\subquestionwithpoints{3} You come to a party with 10 bottles of wine all of Parker number 91. What is the probability that 3 of the 10 bottles have prices greater than \$40?
+\vspace{5cm}
+
+\subquestionwithpoints{2} The oenophile does the same thing next year and realizes that wines from the previous year with low Parker ratings magically on the average now have higher ratings, and wines with high Parker ratings from last year magically on the average now have lower ratings. This is definitely strange since winemakers in general don't change too much about their wines year-to-year. Explain this strange observation to the best of your ability.
+\vspace{5cm}
+\eenum
+
+
+\problem Honda takes the safety of its vehicles very seriously. A major safety feature are functional airbags. The most important thing about airbags is how quickly they inflate. According to Wikipedia:
+
+\begin{quotation}\sf
+The burning propellant generates inert gas which rapidly inflates the airbag in approximately 20 to 30 milliseconds. An airbag must inflate quickly in order to be fully inflated by the time the forward-traveling occupant reaches its outer surface. Typically, the decision to deploy an airbag in a frontal crash is made within 15 to 30 milliseconds after the onset of the crash, and both the driver and passenger airbags are fully inflated within approximately 60-80 milliseconds after the first moment of vehicle contact.
+\end{quotation}
+
+Honda is concerned that airbags manufactured in their factory in their Uttar Pradesh, India plant (near New Delhi) are different from the airbags manufactured in their El Salto, Mexico plant (near Guadalajara).
+
+They can't crash too many cars because it is expensive. They crash-test 5 cars from the Mexico plant and measure an average inflation time of 68.4ms with sample standard deviation 9.4ms and they crash-test 6 cars from the India plant and measure an average inflation time of 76.0ms with sample standard deviation of 8.3ms. Their years of crash-test data indicate that airbag inflation time is normally distributed.
+
+\benum
+\subquestionwithpoints{2} Frame Honda's concern as a hypothesis test.
+\vspace{3cm}
+
+\subquestionwithpoints{6} Run this test at $\alpha=5\%$ using the \textit{critical value} approach. Write a one-sentence summary that should be in the report sent to the technical manager in Japan.
+\vspace{3cm}
+\eenum
+
+\end{document}

@@ -1,0 +1,240 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\title{Statistics 101 Summer I 2011 \\ Midterm Examination}
+\author{Adam Kapelner, Instructor}
+
+\date{June 13, 2011, 8:30-10:30AM}
+
+%\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\noindent First Name \line(1,0){130} ~~~~~~ Last Name \line(1,0){200}
+
+
+%\begin{abstract}
+%
+%\end{abstract}
+
+\section*{University of Pennsylvania's Code of Academic Integrity}
+
+\footnotesize
+Since the University is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the University community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student’s performance are prohibited. Examples of such activities include but are not limited to the following definitions:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: using a cheat sheet in a quiz or exam, altering a graded exam and resubmitting it for a better grade, etc.
+\\
+
+I acknowledge and agree to uphold the University of Pennsylvania's Code of Academic Integrity. \\
+
+\begin{center}
+\line(1,0){250} ~~~ \line(1,0){100}\\
+~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+\end{center}
+
+\normalsize
+
+\section*{Instructions}
+
+This exam is two hours and closed-book. Cheat sheets are not allowed. You may use a graphing calculator of your choice. Please read the questions carefully. I advise you to skip difficult problems until you have finished the exam, then loop back and plug in all the holes. I also advise you to use pencil.\\
+
+\noindent The exam is 100 points total. Partial credit will be granted for incomplete answers on most of the questions. Good luck!
+
+\pagebreak
+
+
+\problem This short-answer section will ask basic questions about probability.
+
+\benum
+\subquestionwithpoints{3} What is the definition of probability? (you may use any of those that we discussed in class, but please explain to the best of your ability)
+\vspace{3cm}
+
+\subquestionwithpoints{2} Below is Boole's inequality (AKA Bonferroni's inequality):
+
+\beqn
+\prob{\bigcup_{i=1}^n A_i} \leq \mysum{i}{1}{n}{\prob{A_i}}
+\eeqn
+
+Express this inequality for $n=2$ \ie for the events $A_1$ and $A_2$.
+\vspace{1.5cm}
+
+\subquestionwithpoints{2} Under what condition(s) is Boole's inequality an equality (\ie $=$ and not $<$)?
+\vspace{3cm}
+
+\subquestionwithpoints{2} Under what condition(s) is Boole's inequality a strict inequality (\ie $<$ and not $=$)?
+\vspace{3cm}
+
+\subquestionwithpoints{2} Draw the sample space for a coin flip and spin of a spinner with sections for ``A'', ``B'', and ``C''.
+\vspace{3cm}
+
+\eenum
+
+\problem You want to survey the residents of Philadelphia in order to find out about their dieting habits. You get a list of all apartment buildings nearby and randomly pick 40 buildings. You then make a list of every apartment in each of the 40 buildings and you randomly pick 250 from this list using a sorted random number column in JMP. You then survey those willing to talk with you (a maximum of one per apartment).
+
+\benum
+\subquestionwithpoints{2} What is the maximum size of your sample? 
+\vspace{2cm}
+
+\subquestionwithpoints{5} If your intention is to make inference about the diets of all residents of Philadelphia, is this a properly designed survey? If not, explain the problem(s) with the survey.
+\vspace{3cm}
+
+\subquestionwithpoints{2} If they exist, can the problem(s) be fixed in order to make non-biased inference about dieting habits using this data?
+\vspace{2cm}
+
+\subquestionwithpoints{3} If instead you sampled 10 apartments from each type of building (luxury, storefront, federal housing, etc), what kind of sampling would this be called?
+\vspace{2cm}
+
+\eenum
+
+\problem Adam has 10 shirts: 2 are red, 3 are blue, 2 are black, and 3 are white.
+
+\benum
+
+\subquestionwithpoints{3} When Adam dresses for a lecture, he picks a random shirt out of his closet. After the lecture, he hangs it up back in his closet. Every morning he forgets which shirt he wore the previous day. Consider each shirt unique even though they may be of the same color. If there are 23 lectures, how many different ways can he wear shirts for the entire summer session?
+\vspace{2cm}
+
+\subquestionwithpoints{3} Consider the unlikely situation that after a lecture, he throws the shirt in a hamper and does not wear it the next day. How many different day-shirt combinations are there in one week of lectures (\ie four lectures)?
+\vspace{2cm}
+
+\subquestionwithpoints{4} What is the probability he wears two red shirts in a week of lectures?
+\vspace{2cm}
+
+
+\subquestionwithpoints{4} What is the probability he wears one red shirt in a week of lectures?
+\vspace{2cm}
+
+\subquestionwithpoints{3} Red shirts are special because they have to be dry-cleaned in a special way. Other shirts can be washed. Consider the cost of washing negligible since he has to do a wash anyway. Each red shirt worn the week prior will become dirty and costs \$3 to be dry-cleaned.
+
+Create a r.v. $X$ that models the cost of Adam's dry-cleaning bill. Use the $\sim$ and brace notation used in class and indicate units. If you do not know how to do this, make up a r.v. $X$ that is \textit{reasonable} for this model so you can continue with the rest of the problem after.
+\vspace{4cm}
+
+\subquestionwithpoints{2} Draw the PMF for $X$. Indicate axes and units clearly.
+\vspace{5cm}
+
+\subquestionwithpoints{2} Adam teaches for five weeks. Each week Adam drops off his dry cleaning on Thursday and picks it up on Sunday. Denote the first week's bill by $X_1$, the second week's bill by $X_2$, ..., and the fifth week's bill by $X_5$. Are $X_1, X_2, ..., X_5 \iid$ with the PMF you just drew? Justify each assumption or explain why it does not hold.
+\vspace{3cm}
+
+\subquestionwithpoints{5} Regardless of what you wrote in the previous part, assume the weekly dry cleaning bills are $\iid$ r.v.'s with the PMF from part (f) from now on. Find the expected total dry cleaning expenses and the standard deviation of total dry cleaning expenses.
+\vspace{4cm}
+
+\subquestionwithpoints{3} For those five weeks also find the expected average of his weekly dry cleaning bill and the standard deviation of the average weekly dry cleaning bill.
+\vspace{3cm}
+
+\subquestionwithpoints{3} Adam manages to get a 10\% discount and also tips \$8 at the end of the summer. Find the expected total bill and the standard deviation of the total bill.
+\vspace{3cm}
+
+\eenum
+
+\problem Dell, Inc. was founded by Michael Dell in 1984 while he was a student at UT. By 1988, it was a publically traded company. In this question, we will be investigating a model for technical support by phone.
+
+\benum
+
+\subquestionwithpoints{2} In 1984, Dell got his first three customers --- three unrelated business managers in the Austin, TX metro area. However, his computers weren't polished products and had many defects. During any business day, his three customers could call him personally asking for help. There was a 10\% chance each would call in. How would you model these three customers' possible calls? Use the notation $X_1, X_2, X_3$ for the three customers and use the r.v.'s we learned about in class.
+\vspace{2cm}
+
+\subquestionwithpoints{3} What is the probability that two customers would call in in a single day?
+\vspace{3cm}
+
+\subquestionwithpoints{4} By the beginning of 1985, he had 100 customers and his computer-assembly process was greatly improved. Now there was only a 3\% chance each would call in. What is the expected number of calls per day and the standard deviation of the number of calls?
+\vspace{3cm}
+
+\subquestionwithpoints{4} By the middle of 1985, he had 577 customers and improved his computers to the point where only his customers called in daily with 1.5\% chance. What is the probability he got more than two calls per day?
+\vspace{3cm}
+
+\subquestionwithpoints{2} Business kept growing and growing for Dell and his ability to make better computers also improved. By 1988, Dell had 400,000 customers and the probability of each of them calling in was 0.7\%. Model a r.v. $N$ for the daily number of calls in 1988 using an approximation we learned about in class. Indicate the parameter(s) clearly.
+\vspace{2cm}
+
+\pagebreak
+\subquestionwithpoints{4} Using the approximation from part (e), find the probability exactly 100 people call in during one day in 1988.
+\vspace{3cm}
+
+%\subquestionwithpoints{4} Find the probability more than 100 people call in during the course of one day. You don't have to compute this, you can leave it in any convenient form you like. (You may want to skip this problem until the end of the test)
+%\vspace{3cm}
+
+\eenum
+
+\problem A drivers education website requires students to read an essay on drunk driving as part of its curriculum. Below is an excerpt:
+
+\begin{quotation} \sf
+As more alcohol is consumed the risk of getting into a vehicular accident if the person drives grows. For example, a man that weighs about 160 pounds would have a BAC of 0.04 an hour after drinking two beers. It’s still way below the limit of driving under the influence but the likelihood of getting into an accident is 1.4 times more probable than [the national average]. Add two more beers then the probability goes up tenfold. Make it a six pack with two more beers, the drinker reaches the limit of 0.10 BAC and the 
+risk is now 48 times more than [the national average]. Add two more for the road and you reach 0.15 BAC well above the legal limit and the risk is now 380 times than the [the national average]. Drunk driving is never an option...
+\end{quotation}
+
+During another part of the curriculum, they read excerpts of the National Safety Council's (NSC) report on traffic fatalities countrywide:
+
+\begin{quotation} \sf
+The motor-vehicle death rate per 100,000,000 vehicle-miles was 1.54 in 2005...
+\end{quotation}
+
+Consider the NSC's statement to be accurate as an average across all accidents, including those under-the-influence of drugs and alcohol. 
+
+Another part of the curriculum is learning about the prevalence of drunk driving:
+
+\begin{quotation} \sf
+WASHINGTON (AP) — An estimated 17 million people have driven while drunk at least once on U.S. streets and highways in the course of a year, according to a government study released Wednesday...
+\end{quotation}
+
+We estimate that 1\% of the people that ``have driven drunk'' drive with 0.15 BAC or over and there are 300 million people in United States. \\
+
+Consider the drunk driving risk literature as well as the newswire to be ballpark-accurate for the year 2005. Consider the distance between your friend's apartment and your apartment to be 10 miles. Denote the event of getting into an accident during these 10 miles as ``A". Denote the event of driving while completely drunk (\ie 0.15 BAC) as ``D". Please use this notation.
+
+\benum
+
+\subquestionwithpoints{3} Use the NSC report excerpt to find the probability of getting into a fatal accident while driving from your friend's apartment to your apartment. 
+\vspace{3cm}
+
+\subquestionwithpoints{3} What is the probability of getting into a fatal accident while driving home from your friend's party on Saturday night after you drank heavily?
+\vspace{3cm}
+
+\subquestionwithpoints{4} If you got into an accident, what was the probability you were drinking heavily?
+\vspace{3cm}
+
+\subquestionwithpoints{4} What is the probabilty of \textit{not} getting into a fatal accident while driving from your friend's apartment to your apartment after you did the Stat 101 homework (\ie \textit{no} drinking)? Hint: you may want to leave the values in the calculator and keep values to many significant digits.
+\vspace{3cm}
+\eenum
+
+\pagebreak
+
+\problem Consider a the following data of heights in inches of an NBA team's roster. The data is already sorted from smallest to largest:
+
+\beqn
+63,72,74,75,76,76,77,78,78,79,80,80,80,82,82,83,84
+\eeqn
+
+Here is an excerpt of \texttt{JMP} output for the above data.
+
+
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=4in,height=2.36in]{jmp_output_heights.JPG}
+\end{figure}
+\FloatBarrier
+
+\benum
+
+\subquestionwithpoints{1} What is the modal value?
+\vspace{1cm}
+
+\subquestionwithpoints{1} What type of data is our univariate dataset?
+\vspace{1cm}
+
+\subquestionwithpoints{1} Begin to calculate the sample standard deviation, $s$. Write out the first few terms but do not compute.
+\vspace{3cm}
+
+\subquestionwithpoints{1} Is there a skew? If so, what type of skew?
+\vspace{2cm}
+
+\pagebreak
+
+\subquestionwithpoints{8} Draw a box and whisker plot for this dataset to scale. Use 2.4 as the half-width of the diamond. Denote the outlier(s) and the salient points of the box (do not denote the values at the ends of the whiskers). Use the JMP output; do not compute the percentiles by hand.
+\vspace{8cm}
+
+
+\eenum
+
+\end{document}

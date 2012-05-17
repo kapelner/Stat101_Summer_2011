@@ -1,0 +1,244 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\title{Statistics 101 Summer I 2011 \\ Homework \#1}
+\author{Adam Kapelner, Instructor}
+
+\date{Due 9AM, Wednesday, June 1, 2011}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+Once again, the path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out''. 
+
+Reading is still \textit{required}. For this homework set, please read sections 7.2, 7.3, 8.1--8.4 in Foster \& Stine as well as the first six pages of Donald Gillies ``Philosophical Theories of Probability'' chapter 1.\footnote{\url{http://www.amazon.com/Philosophical-Theories-Probability-Issues-Science/dp/041518276X}}
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy}; \inyellow{yellow} problems are considered \textit{intermediate}, \inred{red} problems are considered \textit{difficult}; and \inpurple{purple} problems are for \textit{extra credit}. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems.
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. Late homework will be penalized 10 points per day up to a maximum of three days. After three days, it will receive a zero because I will post the solutions. 
+
+15 points are given as a bonus if the homework is typed using \LaTeX. I posted a \LaTeX how-to on webcafe. If you are handing in homework this way, comment out this section and all pictures.
+\end{abstract}
+
+\paragraph{Set Theory} Problems below are related to set theory. The sets we talk about in class are composed of elements that are events. Some of the problems below will be about abstract sets that are divorced from the sets used in probability.\\ \\
+
+\problem Consider the sample space $\Omega$ where you flip a fair coin and roll a fair die.
+
+\begin{enumerate}
+\easysubproblem Draw this event space in a box similar to how we did in class and indicate $\abss{\Omega}$.
+\easysubproblem Are singleton sets of the events in $\Omega$ mutually exclusive? collectively exhaustive?
+\easysubproblem Does it matter if the coin is flipped before the die, after the die, or simultaneously with the die? Explain.
+\easysubproblem Consider the set $T$ which represents all events where the coin was flipped tails and $E$ which represents the set of events where the die rolled an even number. Draw a Venn diagram and list the elements of the sets $T \cap E$ and $E \backslash T$ and mark them on the diagram.
+\intermediatesubproblem Describe fully the set $2^{(E \cup T)^C}$ \ie list all its elements.
+
+\end{enumerate}
+
+\problem In the game Euchre\footnote{see \url{http://en.wikipedia.org/wiki/Euchre} for more information}, 24 playing cards are used consisting of only aces, kings, queens, jacks, tens, and nines.
+
+\begin{enumerate}
+\intermediatesubproblem Construct $\Omega_E$, the event space of a Euchre deck by using set notation and operations on $\Omega$, the event space of a full deck. Use the ``...'' notation used in class to specify your sets explicitly.
+
+\hardsubproblem Let $B$ be the set of black cards, $F$ the set of face cards, $\spadesuit$ the set of spades. Find the set on the right hand side:
+
+\beqn
+\braces{A\spadesuit, 9\heartsuit, K\diamondsuit} \cup \diameter ~\subseteq~ \parens{\parens{B \cup F}^C \cup \spadesuit}^C \backslash \braces{10\spadesuit, 10\clubsuit, 10\heartsuit} \cap \Omega
+\eeqn
+
+Now, evaluate whether the statement itself is true.
+
+\end{enumerate}
+
+\problem This question will get your feet wet in JMP. Load the file \texttt{cars\_mpg\_hw1.JMP}.  The column ``name'' is the make and model of the car and the column ``HWYMPG'' is the gas mileage on the highway in miles per gallon.
+
+\begin{enumerate}
+\intermediatesubproblem The ``HWYMPG'' column's data prints extra significant digits; fix this. Now, sort the dataset by gas mileage with the \textit{highest} first. Now truncate our list of cars so you only have 40 total. Now sort alphabetically by make and model. Last, create a new column that lists the highway mileage in kilometers per liter and display to three significant digits. Print this table and attach it to your homework.
+
+\intermediatesubproblem Using the truncated list from part (a), let $A$ be the set of all cars with less than 32 MPG or greater than or equal to 40 MPG. Find $A^C$ and intersect it with the set of all Toyotas or all Hyundais. List these cars below.
+
+\end{enumerate}
+
+\problem In mathematics, we use convenient notation to represent intervals of real numbers. We represent all numbers $1 \leq x \leq 4$ by the bracket notation $\bracks{1,4}$ the square bracket is for ``closed'' (including the endpoint) and the open parentheses are for ``open'' (not including the endpoint) so $1 < x < 4$ would be $(1,4)$.
+
+\begin{enumerate}
+\easysubproblem Draw a number line for $x$ and shade in the area that represents the set $\bracks{1,3} \cup \bracks{4,9}$
+\easysubproblem Draw a number line for $Z$ and share in the area that represents $|Z| \geq 2$. This $Z$ notation we'll be using in a couple weeks, so I want to make sure you're familiar with this letter in our glorious alphabet.
+\easysubproblem Draw on the number line the set $\bracks{0,1} \cap \bracks{0, \half} \cap \bracks{0, \fourth}$.
+\intermediatesubproblem Describe the set $\infunion{i}{\bracks{0, \oneover{2^i}}}$. 
+\hardsubproblem Describe the set $\infinter{i}{\bracks{0, \oneover{2^i}}}$. Hint: imagine if the top bound was not $\infty$ but something like 3 and draw it out until you see a pattern.
+\end{enumerate}
+
+
+\paragraph{Counting} Problems below are related to counting. We will review the methods learned in class and expand our horizons. \\ \\
+
+%\problem A man is walking in downtown Philadelphia and randomly chooses a building to walk into. He can walk into 1818 Market Street which has 40 floors, 1835 Market Street with 29 floors. When he walks into a building 
+
+\problem We will roll different types of dice. 
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=2in, height=1.35in]{dice.jpg}
+\end{figure}
+\FloatBarrier
+
+\noindent Let $R$ be a standard 6-sided die, let $S$ be an 8-sided die, let $T$ be a 12-sided die, and let $U$ be a 20-sided die. What is the sample size of $\Omega$ for the experiment where we...
+
+
+
+\begin{enumerate}
+\easysubproblem roll $R$ 3 times?
+\easysubproblem roll $R$ then $S$ then $T$ then $U$?
+\intermediatesubproblem roll $R$ 53 times, then wait 53 days, then roll $S$ 32 times and climb 32 meters, then roll $T$ 47 times and drive 47 miles, then roll $U$ 87 times and watch 87 movies.
+\end{enumerate}
+
+\problem Examine the following words and tell me how many \textit{permutations} there are of the letters. We do not care about keeping track of the individual common letters. For example, in the word $dad$, there are two $d's$ and we want to treat the permutation $d_1 d_2 a$ the \textit{same} as $d_2 d_1 a$.
+
+\begin{enumerate}
+\easysubproblem town
+\easysubproblem mississippi
+\intermediatesubproblem supercalifragilisticexpialidocious\footnote{see \url{http://en.wikipedia.org/wiki/Longest_word_in_English}}
+\end{enumerate}
+
+\problem Below is a standard chessboard.\footnote{If you are not familiar with the pieces in chess, please read \url{http://en.wikipedia.org/wiki/Chess}} In the following problems, pieces of the same type are considered interchangeable (\ie all white pawns are the same, all black rooks are the same, etc) but \textit{not} across color (a white pawn is different from a black pawn).
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in, height=1.95in]{chess.jpg}
+\end{figure}
+\FloatBarrier
+
+\begin{enumerate}
+\easysubproblem How many ways are there to place the white king on a white square?
+\intermediatesubproblem How many ways are there to set up the pieces in the back ranks of both white and black \ie arrange the two rooks, two knights, two bishops, king and queen on the first row of 8 squares.\footnote{This is called ``Fischer Random Chess'' after the famous grandmaster Bobby Fischer who proposed the idea for a more fun game.}
+\hardsubproblem How many ways are there to arrange the pieces on the board?
+\end{enumerate}
+
+\problem We have 4 blue marbles, 4 green marbles, 2 orange marbles, and 2 red marbles.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in, height=2.54in]{marbles.jpg}
+\end{figure}
+\FloatBarrier
+
+\pagebreak
+\noindent For all these questions, if you are using ``choose notation'', please write your choose notation, then write the formula using factorials, then write the actual number after you compute it.
+
+\begin{enumerate}
+\easysubproblem Viewing all the marbles as \textit{unique}, how many ways is there to order the marbles?
+\easysubproblem Viewing all marbles of the same color as \textit{interchangeable}, how many ways is there to order the marbles?
+\intermediatesubproblem If I pick 4 marbles at random from the collection, what is the probability of getting all four marbles the same color?
+\intermediatesubproblem If I pick 4 marbles at random from the collection, what is the probability of getting two greens and one blue and one orange?
+\extracreditsubproblem If I pick 4 marbles at random from the collection, how many ways are there to get two-of-a-kind \ie two marbles of one color and two marbles of a different color.
+\end{enumerate}
+
+\paragraph{Probability} This section will cover probability foundations (addition rule, multiplication rule, complements) as well as conditional probability. \\ \\
+
+\problem A businessman has a meeting in one of the three tallest buildings in downtown Philadelphia.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=4in, height=2.08in]{buildings.jpg}
+\end{figure}
+\FloatBarrier
+
+\noindent From left to right we have the Comcast Center at 1701 John F. Kennedy Blvd (58 floors), One Liberty Place at 1650 Market Street (61 floors), and Two Liberty Place at 1601 Chestnut Street (58 floors). Consider the case where he enters a random building and goes to a random floor
+
+\begin{enumerate}
+\easysubproblem Draw a probability tree (see p.183 of Stine \& Foster) of this random event. Use ``...'' notation so your trees don't take up the whole page.
+\easysubproblem Are the building selection and floor selection \textit{independent}?
+\easysubproblem What is the probability of the businessman winding up on floor 23 of Two Liberty Place?
+\easysubproblem What is the probability of the businessman winding up on floor 23 of any building?
+\easysubproblem What is the probability of the businessman winding up on floor 60 of any building?
+\easysubproblem If the businessman is on floor 60, what is the probability he is in One Liberty Place?
+\easysubproblem What are the odds he winds up on any floor between 1 through 58?
+\intermediatesubproblem If the businessman is on floor 5, what is the probability he is in One Liberty Place?
+\intermediatesubproblem Let's say the businessman does this straight for four weeks, five days per week. What is the \textit{odds} he winds up on floor 32 every business trip?
+\end{enumerate}
+
+\problem This will get your feet wet using \texttt{R}.\footnote{Please download it from \url{http://cran.r-project.org/} and then double-click to open an \texttt{R} console.}
+
+\begin{enumerate}
+\easysubproblem To calculate combinations, use the \texttt{choose(n,k)} function. Calculate the number of five-card hands from a standard deck by copying the following code into \texttt{R} and then pressing enter:
+
+\begin{verbatim}
+choose(52, 5)
+\end{verbatim}
+
+Please write down the answer.
+
+\easysubproblem Verify the probability in class of a ``full house'' by copying the following code into \texttt{R} and then pressing enter:
+
+\begin{verbatim}
+choose(13, 1) * choose(4, 3) * choose(12, 1) * choose(4, 2) / choose(52, 5)
+\end{verbatim}
+
+Write down the answer as a \textit{percentage}.
+
+\intermediatesubproblem We are going to do a little experiment to explore the definition of probability as a limiting frequency. We will be looking at the context of flipping a coin and getting heads. Remember the definition was:
+
+\beqn
+\prob{H} = \limitn \frac{\text{count(H in $n$ flips)}}{n}
+\eeqn
+
+Run the following code by copying and pasting:
+
+\begin{verbatim}
+N = 30000
+sims = sample(0:1, N, replace = T)
+freqs_by_n = array(NA, N)
+for (n in 1 : N){
+  freqs_by_n[n] = sum(sims[1:n]) / n
+}
+plot(10:N, 
+  freqs_by_n[10:N], 
+  xlim = c(10, N), 
+  ylim = c(0.40, 0.60), 
+  pch = ".", 
+  xlab = "number of samples",
+  ylab = "frequency of heads",
+  main = "P(H) as a limiting frequency: 30,000 samples")
+abline(h = 0.5, col = "blue")
+freqs_by_n[N]
+#last line placeholder
+\end{verbatim}
+
+The console should have popped up a plot.\footnote{This is a \textit{real} statistical simulation. Each time you run this code it will be different. You can compare plots with your friends but take note that they will not look exactly the same.} Print this out and attach it to your homework. 
+
+From the title of the plot and the x and y axes, tell a story about what is going on here. 
+
+What is the limiting frequency of heads after 30,000 coin flips to 3 decimals? (that is the number that appears in the console directly after ``\texttt{$>$ freqs\_by\_n[N]}'')
+
+\end{enumerate}
+
+\problem As part of a health study, 987 patients were sampled and 296 were found to be obese (denote this set $L$ for ``large''), 82 were found to be diabetic (call this set $D$) and 49 were found to be \textit{both} obese and diabetic.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=4in, height=1.81in]{diabetes.jpg}
+\end{figure}
+\FloatBarrier 
+
+\begin{enumerate}
+\easysubproblem Draw $\Omega$, $L \subset \Omega$, $D \subset \Omega$ as a Venn diagram \textit{to scale} as best as you can.
+\easysubproblem Draw a table of counts similar to the one on p.175 of Stine \& Foster.
+\easysubproblem Are being obese and being diabetic dependent or independent and justify your answer giving insight into what you think is happening from a medical point of view.
+\easysubproblem Draw a table of frequencies similar to the one on p.175 of Stine \& Foster. 
+\easysubproblem Estimate $\prob{L}$, $\prob{D}$, $\prob{L,D}$ by assuming 987 is a long-run frequency.
+\easysubproblem Find $\prob{D | L}$ and interpret the question and answer in your own words.
+\intermediatesubproblem Find $\prob{L | D}$ and interpret the question and answer in your own words.
+\intermediatesubproblem Find $\prob{D | L^C}$ and interpret the question and answer in your own words.
+\intermediatesubproblem Draw a probability tree of this space similar to the one on p.183 of Stine \& Foster.
+\end{enumerate}
+
+\problem Philosophy
+
+\begin{enumerate}
+\extracreditsubproblem On p.1 of Gillies book, explain the ``four principle current interpretations'' in your own words. 
+\end{enumerate}
+
+\end{document}

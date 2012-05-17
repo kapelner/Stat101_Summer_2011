@@ -1,0 +1,182 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\title{Statistics 101 Summer I 2011 \\ Homework \#5}
+\author{Adam Kapelner, Instructor}
+
+\date{Due 9AM, Wednesday, June 29, 2011}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+
+\begin{abstract}
+There is not enough time to allow the new material to seep in before the final. Therefore in this assignment I'm going to require you to review lecture notes 17-20. In addition, there will be some material I cover on Tuesday that I cannot find in the book as a standalone section \ie the section about $\yhat \sim \normnot{\cdot}{\cdot}$. My exhortation to review the notes goes double for that material.
+
+In Stine \& Foster, read chapter 6 and 19. You can ignore the section on ``properties of residuals'' and the section on $r^2$ which are both concepts you will study in detail in Stat 102. I gave the last problem as practice and is \textit{not required}. You should review the notes and the relevant parts of ch. 18 on 2-prop and 2-samp hypothesis testing before you do it. I would also recommend to read Wikipedia's treatment on \href{http://en.wikipedia.org/wiki/Regression_toward_the_mean}{regression to the mean} which will be useful for the problem about Galton's data.
+
+Once again, \ingreen{green} means \textit{easy}, \inyellow{yellow} means \textit{intermediate}, \inred{red} means \textit{difficult}, and \inpurple{purple} means \textit{extra credit}. This homework is worth 100 points and will be \textbf{graded on completeness}. Late homeworks are \textbf{not accepted}. This is for your benefit as you should use Wednesday to study for the final. As usual, 15 points are given as a bonus if the homework is typed using \LaTeX ~(please delete all extraneous text).
+\end{abstract}
+
+\paragraph{Dependent Random Variables} This section will cover the concepts of covariance and dependence. \\
+
+\problem We will prove some basic facts about covariances.
+
+\benum
+\easysubproblem Use the definition of covariance and variance to show that the covariance between any r.v. $X$ and \textit{itself} is just $\var{X}$.
+\easysubproblem If $X$ and $Y$ are two independent r.v.'s, show that $\cov{X}{Y}$ is zero. This is in your notes.
+\hardsubproblem If $X$ and $Y$ are two independent r.v.'s, where $\expe{X} = \mu_X, ~\expe{Y} = \mu_Y, ~\var{X} = \sigsq_X, ~\var{Y} = \sigsq_Y$, show that:
+
+\beqn
+\var{XY} = \sigsq_X \sigsq_Y + \musq_X \sigsq_Y + \musq_Y \sigsq_X
+\eeqn
+
+Hint: this can be done in three lines if you the fact that you proved in homework \#2 problem 2 part (g).
+\hardsubproblem $X$ and $Y$ are r.v.'s and $a,b,c,d$ are numerical constants. Use the definition of covariance to show that the covariance between $aX + b$ and $cY + d$ is $(ac)  \cov{X}{Y}$. If you are having trouble with this question, leave it until you finish the rest of the problem set.
+
+\eenum
+
+\problem Consider two spinners that people gamble on:
+
+\beqn
+X_1, X_2 \iid \begin{cases}
+~~\$0 \withprob \half \\
+-\$2 \withprob \frac{2}{5} \\
+~~\$4 \withprob \frac{1}{10}
+\end{cases}
+\eeqn
+
+\benum
+\easysubproblem Calculate the expectation of $X_1$ and  $X_2$.
+\easysubproblem Calculate the standard deviation of $X_1$ and $X_2$.
+\easysubproblem Explain in English why $S$, the r.v. that is equal to the sum of the two spinners, and $X_1$ are dependent. Then, prove it mathematically.
+\hardsubproblem Calculate the covariance between $S$ and $X_1$. Indicate units. I would recommend using the table method we did in class. If this is taking too long, do the rest of the problem set first and loop back to this one.
+\easysubproblem Use the result from the previous question(s) to find the correlation between $S$ and $X_1$.
+\eenum
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=1.25in,height=1.51in]{spinner.jpg}
+\end{figure}
+\FloatBarrier
+
+\paragraph{Regression} This section will cover the concepts of scatterplots, best fit lines, Simpson's paradox, and regression to the mean. \\
+
+\problem The goal of this is to learn how to build least squared lines from scratch, make predictions, calculate probabilities of responses, and to be able to leverage the power of JMP. Download \texttt{phila\_housing.JMP} and load it up. This data set contains information related to house sales in Philadelphia and it has many variables. We are particularly interested in building a model that predicts house selling price (in dollars) using crime rate.
+
+\benum
+\easysubproblem What data types are the variables ``selling price'' and ``crime rate''?
+\easysubproblem Define ``response variable'' and ``explanatory variable'' and explain why they are sometimes called ``dependent variable'' and ``independent variable'' respectively.
+\easysubproblem Is this an observational study or an experiment? Explain your answer.
+\easysubproblem In the model we wish to create, what is the response variable ($Y$) and what is the explanatory variable ($X$)?
+\easysubproblem Create a scatterplot using ``Fit Y by X'' for ``selling price'' and ``crime rate''. Analyze this scatterplot using the four criteria we went over in class (see bottom of p.108 for a refresher).
+\easysubproblem Would you think it's appropriate to fit a line to this plot?
+\easysubproblem Now, let JMP compute the univariate and bivariate statistics for you by clicking the red down arrow, then ``density ellipse'' and click the 0.95 option. Write down $\xbar, \ybar, s_x, s_y, r$.
+\easysubproblem One of the rows was excluded from the data set (in JMP it appears with a cancel icon in the row header). Why is this row an outlier? To answer this question, un-exclude the row and create a new scatterplot, then explain what you see.
+\easysubproblem Without using JMP, compute the best fit line's intercept ($b_0$) and slope ($b_1$) using the formulas from class and the univariate and bivariate statistics you wrote down previously.
+\easysubproblem Use JMP to fit a least squares line by clicking the red down arrow and selecting the option ``Fit Line''. A line should appear as well as a bunch of information below the plot. Under the table header ``Linear Fit'', write down the equation. Is it the same as the one you came up with in the previous example? Print out this JMP analysis window and attach it to your homework.
+\easysubproblem If the crime rate is 40, what is your best guess as to the sale price of the house?
+\easysubproblem If the crime rate is 0, what is your best guess as to the sale price of the house?
+\easysubproblem If the crime rate is 98.4, what is your best guess as to the sale price of the house?
+\intermediatesubproblem Is there anything wrong with making the predictions in the previous two questions?
+\easysubproblem Under the table header ``Summary of Fit'', write down the RMSE.
+\intermediatesubproblem What is the probability of a house being worth more than \$200K if the crime rate is 30?
+\intermediatesubproblem What is the probability of a house being worth less than \$200K if the crime rate is 35?
+\hardsubproblem Consider the inverse problem where crime rate is viewed as a function of selling price. Use JMP to fit a least squares line for that data. Write down the equation. Now solve for selling price as a function of crime rate using that equation. Why is your equation different from the equation you got before?
+\extracreditsubproblem Solve the following equation for $b_1$:
+
+\beqn
+\partialop{b_1}{\sumonen{i}{(y_i-\yhat_i)^2}} = 0
+\eeqn
+
+to prove that the slope estimate on the least squared line is: $b_1 = r\frac{s_y}{s_x}$. I showed you how to do this in class but I skipped over the messy details.
+\eenum
+
+\problem Now that you're a star in using JMP to create least squared regression lines, we will do another example. Download \texttt{doctor\_salary.JMP} and load it up. This dataset contains information about doctors and their salary. We are particulary interested in whether or not there is an effect of the number of publications on their salary.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3in,height=1.82in]{doctor_salary.jpg}
+\end{figure}
+\FloatBarrier
+
+\benum
+\easysubproblem Create a best fit line for salary in 2005 explained by publications per year using the JMP methods you learned in the last problem. Write down the prediction equation.
+\easysubproblem Would you say there's an association between publications per year and salary in 2005? Does publishing less \textit{cause} the doctor to make more money?
+\easysubproblem Now we want to do the same analysis as before for each department the doctor is in. In JMP you would do this by doing a ``Fit Y by X'' where Y is salary in 2005, X is publications per year, and you would add Dept as the ``By'' variable. You should get 6 different scatterplots: one for each department. Fit a line to each of them. Do you see the negative association anymore? Is this an example of Simpson's paradox in action?
+\intermediatesubproblem Why was there a negative association in part (a)? Explain it by using what you learned in part (c).
+\eenum
+
+
+\problem The method of creating a least squared line was named after the discovery of regression to the mean by Sir Francis Galton in the late 1800's. We will analyze a portion of Galton's original parent-child height dataset using \texttt{R}. Download the file \texttt{galton.RData} from webcafe and load it into \texttt{R} by using ``file...Load Workspace''. None of the code in the question will work without this since the file contains the dataset. The two variables are ``parent'' and ``child''. The parent variable is an average of the two parents' heights in inches (the mother's height was multiplied by 1.08 to adjust for gender differences). The child variable is the height of a child. The number of rows is $n=928$.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=2in,height=2.18in]{galton.jpg}
+\caption{A table from Galton's original paper}
+\end{figure}
+\FloatBarrier
+
+\benum
+\easysubproblem Explain in your own words what ``regression toward the mean'' means.
+\easysubproblem Run the following \texttt{R} code:
+
+\begin{verbatim}
+plot(galton$child, 
+  galton$parent, 
+  xlim = c(60, 75),
+  ylim = c(60, 75),
+  ylab = "Child Height (in)", 
+  xlab = "Parent Height avg and adj (in)", 
+  main = "Child Height vs Parent Height");
+#end of code placeholder
+\end{verbatim}
+
+This will create a scatterplot. Use the criteria we discussed in class to describe the association in this plot.
+
+\easysubproblem Explain what regression toward the mean would mean in this example. Do this before you do the next question.
+
+\easysubproblem Run the following \texttt{R} code:
+
+\begin{verbatim}
+mod = lm(galton$child ~ galton$parent);
+mod$coefficients;
+#end of code placeholder
+\end{verbatim}
+
+From the output of above, write down the least squares regression line with the values substituted for $b_0$ and $b_1$, the intercept and slope.
+
+\easysubproblem Now run the following \texttt{R} code:
+
+\begin{verbatim}
+abline(mod, col = "red");
+abline(a = 0, b = 1, col = "blue");
+#end of code placeholder
+\end{verbatim}
+
+This will draw in \inred{red} the least squares line on the plot and in \inblue{blue} the 45$^o$ line. This was one of the ways Galton originally studied regression to the mean. Do you see what he was surprised about? Explain.
+\eenum
+
+\paragraph{More Hypothesis Testing} This will be good practice for two-sample t-tests. This section is \textit{not required to hand in} but is strongly recommended. \\
+
+\problem Amtrak maintains FRA Class 8 track on the NE corridor from Philadelphia to New York as well as other places. Class 8 track means it allows for top speeds of 125MPH on straightaways and 80MPH on turns. In order to run trains that quickly, the lines must maintain 10,000V AC which is converted to 6,500V DC to power the engines.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=2.5in,height=1.67in]{amtrak.jpg}
+\end{figure}
+\FloatBarrier
+
+Sometimes voltages vary between stations. There are many reasons for such variation which are complicated. 12 samples were taken at New York Penn Station with a sample average of $9932$V and a sample standard deviation of $1232$V. 10 samples were taken at 30th Street Station in Philadelphia with an average of $9982$V with a standard deviation of $705$V.
+
+\benum
+\easysubproblem We are interested if there is a difference between the mean voltage at New York Penn station and at Philadelphia 30th Street Station. State hypotheses for the appropriate test.
+\intermediatesubproblem Are there any problems with running this test?
+\intermediatesubproblem Regardless of whether or not you thought there were problems, Run this test at $\alpha = 5\%$ disregarding the problems, if they exist.
+\intermediatesubproblem In order to do a 2-sample $t$-test, you must first check to see if the standard deviations should be pooled or left unpooled. Make sure you did this in the previous part. You should have used the unpooled protocol. However, the ratio of the sample variances was very near 3. Run the test again at the same $\alpha$ level using the pooled. Did your answer change much?
+\eenum
+
+\end{document}

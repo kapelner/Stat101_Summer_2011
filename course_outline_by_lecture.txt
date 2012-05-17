@@ -1,0 +1,31 @@
+Course Outline by Lecture
+
+Lecture Date   Topics
+1       5/23   Basic Set Theory, Definition of Sample Space
+2       5/24   Counting, Permutations, Combinations, Intro to Probability
+3       5/25   Definition of Probability, Axioms, philosophy, and properties of Probability
+4       5/26   Conditional Probability, Bayes Rule, Probability Trees, Independence, Dependence
+5       5/31   Random Variables, E[], Var[], SD[], rules with adding and multiplying constants
+6       6/1    General E, Var, SD rules, iid assumptions, sum r.v., avg r.v, bernoulli r.v.
+HW 1 Due
+7       6/2    Binomial r.v., Poisson r.v., Data as realizations of r.v.'s, summary statistics, xbar, s^2
+8       6/3    univariate data, summary stats, data types, data tables, bar plots, histograms, box / whisker plots
+9       6/6    Log transformation, Survey sampling, SRS, etc, continuous r.v.'s, intro to bell curve ch13 
+10      6/7    normal curve, std normal, calculating Z probs, demos, CLT, Sn's distr, Xbar's distr, QQ plots ch12, 14
+HW 2 Due
+        6/13   in-class midterm  
+11      6/14   control theory, error types ch14 
+12      6/15   Confidence Intervals (CIs) for proportions ch 15
+13      6/16   CIs for samples, the T distribution, Hypothesis testing for one proportion: one and two-sided z tests, type I/II errors
+HW 3 Due
+14      6/20   One sample one / two-sided z and t-tests, power
+15      6/21   Transforming CI's, Chi-squared distribution, testing SD of the population, intro to three types of bivariate data analysis, independence of r.v.'s, categorical on categorical: contingency tables, tests of independence
+16      6/22   Association does not imply causation, Lurking variables, Simpson's Paradox, experimentation, observational studies, bivariate analysis: categorical on interval visualization
+17      6/23   two prop hypothesis testing, two sample z-tests, two-sample t-tests pooled vs unpooled tests, E[XY] = E[X]E[Y]
+18      6/24   review of r.v.'s, covariance, correlation, interval vs. interval bivariate analysis, sample covariance, sample correlation, dependence, (x,y) realized in pairs
+HW 4 Due
+19      6/27   correlation matrices, scatterplot analysis, response and explanatory variables, Simpson's paradox (again), linear regression from the ground up, best fit line formulas, properties of the best fit line, rmse
+20      6/28   the normal error model of regression, rmse again, the distribution of predictions, regression to the mean, summary of formulas you need to know
+21      6/29   review of HW5, the other courses offered by our Stat dept
+HW 5 Due 
+        6/30   in-class final

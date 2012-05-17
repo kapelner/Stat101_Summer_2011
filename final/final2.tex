@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\title{Statistics 101 Summer I 2011 \\ Homework \#4}
+\author{Adam Kapelner, Instructor}
+
+\date{Due noon, Friday, June 24, 2011 (in my mail slot)}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+Cond prob
+Binomial (do this as an application) --Adi's prob
+E[XY] Covariance 
+Scatterplots
+Simpson's Paradox
+Chi-Sq contingency
+one prop CI
+two prop diff CI
+one samp CI
+one prop Hyp test
+two prop Hyp test
+one samp Hyp test
+two samp Hyp test
+
+
+1) Every weeknight I drive through the same intersection on the way back from Wharton. There's a 5\% chance I'm speeding and a 1\% chance I run through the red light.
+
+a) Speeding and running through the red light are independent. Build a probability tree representing this sample space.
+ 
+b) If I speed, there's a 2\% chance I get caught. If I run the light, there's a 6\% chance I get caught.
+
+c) 
+
+
+The hospital system of Philadelphia which consists of H1, H2, H3, H4 is interested in studying Cirrhosis of the liver and alcoholism. They take a simple random sample of 235 patients. They asked their age, gender, if they were alcoholics, whether or not they had Cirrhosis presently or in the past, whether or not their cholestoral was high or low, and recorded the date the survey was completeed.
+
+57 said they are alcoholics for many years. 9 of the alcoholics also have some form of Cirrhosis. There were also 15 patients who had Cirrhosis but had no history of ever drinking to excess. Denote alcoholism ``A'' and Cirrhosis ``C''. 
+
+a) Draw the first two rows of the raw data, then a ``...'' and the last row. Make up values that are reasonable. Indicate column headers clearly. Add an ``ID'' column and make it the first column.
+
+b) What are the data types of each of the columns in the data table? List them in order of the columns in the drawing in the previous part from left to right.
+
+%survey sampling
+a) The hospital administrator is shocked at these numbers. He can't possibly imagine that close to 40\% of hospital patients in all of Philadelphia are alcoholics and he is thinking of scheduling an appointment with the city mayor. Is there cause for alarm? Explain.
+
+%cond prob
+a) Accd to Wikipedia:
+
+Alcoholic cirrhosis develops for between 10\% and 20\% of individuals who drink heavily for a decade or more.
+
+Make the correct probability statement, estimate the probability, and evaluate whether Wikipedia's statement is ballpark for this Philadelphia hospital system's patient population.
+
+%ind and dep
+b) Are alcoholism and cirrhosis of the liver independent or dependent? Assume $n$ is large enough to estimate probabilities exactly. Make sure you provide a mathematical justification for your answer.
+
+%experiments vs obs studies
+c) The hospital administrator wants to publish this experimental data because he thinks he found interesting results. Is this an experiment? If so, define experiment and explain why. If it's not, what is it and define whatever it is.
+
+%hyp testing
+e) You wish to test the hospital's data. You remember that any association may occur by sampling variation.  Formulate this as a hypothesis test.
+
+%chisq test of ind
+f) Carry out the test in the previous part at $\alpha = 1\%$ using the $\pval$ approach.
+
+g) The hospital is thinking of allocating \$2M to study this association. Is it possible there is no association? Discuss.
+
+%association and causality
+d) The administrator feels that it is obvious that Cirrhosis is caused by alcoholism since the data looks unequivocal. Do you agree with him?
+
+
+%another cond prob
+b) Other hospital administrators are not only interested in the association of alcoholism and Cirrhosis but are also interested in the case where they are not getting the disease and if being an alcoholic or not matters.  What is causing these patients livers to get scar tissue? Is there any difference between the likelihood of being Cirrhosis free if you're not an alcoholic versus if you are? Frame this as a hypothesis test.
+
+c) Are there any issues with running the hypothesis test in the previous part?
+
+d) Regardless of whether or not you stated an issue that could invalidate the test, go ahead and perform the test anyway at an $\alpha = 5\%$ level using the $\pval$ approach.
+
+
+
+Although casinos would like to believe that their games are perfectly designed to give them the edge, there are many documented cases where they make mistakes and actually allow people to play games that are expectation positive (for players). One of the most famous of these is ``five-card-charlies'' in blackjack. If they player got five cards without busting, they automaticall win. This was discontinued it in the 1950's or 60's. A lesser-known game is  video-draw poker with deuces wild in Nevada, USA. According to Wikipedia, playing for 5 credits a hand has a mean return of 100.8\% in theory. By ``theory'' we mean if you play the \textit{optimal} hand for every possible combination of cards; and this was calculated by a computer that analyzed all $\binom{52}{5}$ possible hands. The standard bet for one credit is \$1. Hands usually take 12 seconds to play.
+
+Someone with a photographic memory who can memorize the complicated algorithm may be able to break even, but someone who is really cheating (through unknown means) can really take the casino for a lot of money.
+
+a) Why would an expectation-positive game such as 5-credit Deuces Wild Video Draw Poker be bad for the casino?
+
+b) What is the expectation in dollars of one 5-credit bet considering someone has memorized the optimal rules necessary to play perfectly like the computer can?
+
+c) The computer also calculated the standard deviation of a 5-credit bet using the optimized, theoretical algorithm to be \$113. Consider the computer playing for 10hr straight in a simulated environment. What is the probability the computer loses?
+
+d) The casino is tracking a suspicious person. He comes in every Monday night alone and uses a different video poker machine, always deuces wild, he plays 5-credit hands, never plays any other games, and never drinks alcohol. The security cameras capture video of him staring intently at the screen for all of his time there. He plays for three hours straight every time he comes in. The casino keeps precise electronic records for each of its video poker machines. Over the past four weeks, he has won \$1212. Below is a histogram, summary stats, and a QQ-plot of aggregate data from all the machines he played at in the past month. You would like to calculate a 95\% confidence interval for his winnings per 5-credit hand. Are there any problems with creating this CI?
+
+e) Regardless of whether or not there are problems with it, calculate a 95\% confidence interval for his winnings per hand.
+
+f) Using your answer from the previous problem, calculate a 95\% confidence interval for his winnings over the course of the whole month.
+
+e) The casino views the highest possble return of 97\% on a 5-credit play as the maximum return for a human being (not a computer). Anything more, and they ban any player from playing in their casino because they assume the player is somehow cheating. Create a hypothesis test to see if this guy should be booted but do not compute.
+
+g) What would a type I error be and its cost?
+
+h) What would a type II error be and its cost?
+
+i) Consider the standard deviation per hand to be \$107 when the return is 97\%. Run the test you formulated at $\alpha = 5\%$ using the $\pval$ approach.
+
+j) The casino is especially interested if this guy is playing at the theoretical maximum of 100.8\% return just like the computer. Calculate the probability the casino can detect if he is playing using this theoretically optimal strategy given the 12hr of aggregated video and machine data they have.
+
+k) How many hours of data would they need before they could detect with probability 90\% that he was playing using the theoretical optimal strategy algorithm? This problem is really hard. Do it at the end of the exam if you have time.
+
+
+%%%Adi's traffic accident M-F Simpson's paradox question. Do a 2-prop hyp test in here
+
+b) Does this mean that males are actually worse drivers? Phrased another way, based on this study, does being a man actually cause the driver to have a higher chance of accident?
+
+c) Adi's question
+
+
+
+%%%Adi's Parker rating regression question with binomial
+
+We have been analyzing dice a lot. Here are two dice mutually indistinguishable dice, call them die A and die B, invented by the MI6 British secret service that will never roll doubles. This is in order that spies from Ghana can penetrate El Salvadorian and Colombian drug gangs who play Russian Roullette if doubles are rolled. Here's how the dice work: if die A rolls a one, the other will roll a 2; if A rolls a two, B will roll a 3; if A rolls a 3... the probably A rolls any of the faces is still one sixth.
+
+Remember, we calculated that a fair die's expectation is 3.5 and standard deviation is 2.9292.
+
+%iid
+a) Are these dice independent? Prove or disprove using a mathematical statement.
+
+a) Are these dice identically distributed? (Yes / No is fine)
+
+b) Calculate the expecation of the sum of the two faces when both are rolled together
+
+c) Calculate the variance of the sum of the two faces when both are rolled together
+
+d) Calculate the correlation of these two dice.
+
+
+HW set:
+
+
+\end{document}
+
