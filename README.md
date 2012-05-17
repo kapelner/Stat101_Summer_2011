@@ -5,13 +5,13 @@ This repository contains the course materials for my summer 2011 class in basic 
 
 The repository contains:
 
-1) syllabus and course outline (lecture titles with dates)
-2) lectures (the recordings as MP3's and my notes scanned as PDF documents)
-3) all five homework assignments
-4) homework solutions (as jpg's and videos on youtube except HW5)
-5) midterm exam and final exam (with grading rubric and solutions)
-6) in-class demos
-7) reference materials (distribution tables and miscellaneous)
+1) lectures (the recordings as MP3's and my notes scanned as PDF documents)
+2) all five homework assignments
+3) homework solutions (as jpg's and videos on youtube except HW5)
+4) midterm exam and final exam (with grading rubric and solutions)
+5) in-class demos
+6) reference materials (distribution tables and miscellaneous)
+7) course outline (lecture titles with dates)
 
 Below are links to the homework video solutions:
 
