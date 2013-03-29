@@ -12,7 +12,7 @@ The repository contains:
 5. in-class demos
 6. reference materials (distribution tables and miscellaneous)
 7. course outline (lecture titles with dates)
-
+8. course syllabus
 
 Below are links to the homework video solutions:
 
